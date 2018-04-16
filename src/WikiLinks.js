@@ -10,6 +10,11 @@ export default class WikiLinks extends Component {
         WikiApi.getLinks(this.props.title).then(
             links=> this.setState({ links: links }));
     }
+    
+    componentWillReceiveProps(nextProps) {
+        WikiApi.getLinks(nextProps.title).then(
+      links => this.setState({ links: links }));
+}
   render() {
     var links = this.state.links;
     var items = [];

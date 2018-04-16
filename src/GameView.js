@@ -17,6 +17,7 @@ export default class GameView extends Component {
                    summary: text
                });
             });
+            
     }
     
   render() {
